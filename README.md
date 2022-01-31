@@ -37,7 +37,20 @@ GIT BASH (for Windows) - INSTALLATION:
 ***
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
-|1| ... | ... |
+|1| https://github.com/ | Create repository > Add description and tags > Copy HTTPS of your repo (#) |
+|2| Create Folder | Open with VSC to start working > Open your Terminal (look that it says "BASH") |
+|3| $ git init | Initialize git in the terminal (click the arrow beside the + to see if "BASH" is default) |
+|4| $ git config user.name "" | OPTIONAL: configurate the terminal with your name (useful if you work on different computers) |
+|5| $ git config user.email "" | OPTIONAL: configurate the terminal with your email (useful if you work on different computers) |
+|6| readme.md | Write a readme.md in your explorer of VSC as a first commit to make |
+|7| $ git add readme.md | ADD your change to the git |
+|8| $ git commit -m "first commit" | COMMIT your first change |
+|9| $ git branch -M main | OPTIONAL: Change the branch name from master to main |
+|10| $ git remote add origin (#) | REMOTE them with the github HTTPS link  |
+|11| $ git push -u origin master | PUSH your changes - (If you did step 9, master would be main) |
+|12| $ git status | STATUS check to make sure everything went right |
+|13| $ git log | LOG shows your structure |
+|14| Now its time to make some changes:
 
 
 <br />
@@ -48,22 +61,20 @@ GIT BASH (for Windows) - INSTALLATION:
 
 ## &nbsp;How UPDATE: ✅ (Successfully commit changes)
 ***
+
+
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
-|1| https://github.com/ | Create repository > Add description and tags > Copy HTTPS of your repo (#) |
-|2| Create Folder | Open with VSC to start working |
-|3| $ git init | Initialize git in the terminal |
-|4| $ git config user.name "" | OPTIONAL: configurate the terminal with your name |
-|5| $ git config user.email "" | OPTIONAL: configurate the terminal with your email |
-|6| readme.md | Write a readme.md in your explorer of VSC as a first commit to make |
-|7| $ git add readme.md | ADD your change to the git |
-|8| $ git commit -m "first commit" | COMMIT your first change |
-|9| $ git branch -M main | OPTIONAL: Change the branch name from master to main |
-|10| $ git remote add origin (#) | REMOTE them with the github HTTPS link  |
-|11| $ git pus -u origin master | PUSH your changes - (If you did step 9, master would be main) |
-|12| $ git status | STATUS check to make sure everything went right |
-|13| $ git log | LOG shows your structure |
-|14| Now its time to make some changes:
+|1| FOLDER CHECK | Check if you are in the right output folder where git has been initialized |
+|2| $ cd ../ or: dollar ld | CHANGE directory or SHOW the CONTENT of your directoy to adjust your folder output if necessary |
+|3| $ git pull | CHECK of undone changes (conflicts) and decide which change you want to make if necessary |
+|4| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) |
+|5| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") |
+|6| $ git push -u origin master | PUSH your changes - (master if your branch is named "master", otherwhise say the right name) |
+|1| ... | ... |
+|1| ... | ... |
+|1| ... | ... |
+
 
 
 
