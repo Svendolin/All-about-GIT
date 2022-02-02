@@ -78,16 +78,20 @@ GIT BASH (for Windows) - INSTALLATION:
 ***
 <img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
 
-## &nbsp;How to MAKE, PUSH and MERGE BRANCHES: ✅ (Working non-destructive)
+## &nbsp;How to MAKE, ADD + PUSH and MERGE BRANCHES: ✅ (Working non-destructive)
 ***
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
 |1| $ git branch test | CREATE a new branch which is called "test" |
 |2| $ git checkout test | CHECKOUT to your new branch (you switch over from your other branch to your "test" branch) |
 |3| $ git status | OPTIONAL: STATUS check to make sure everything went right |
-|4| $ git push -u origin test | PUSH your changes to your "test"-branch |
-|5| $ git checkout master | OPTIONAL: checkout to your other branch (must exist and name must match) |
-|6| $ git merge test | CAREFUL: Only works if you are in the source branch (like "master") and "drag in" the changes.  |
+|4| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) |
+|5| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") |
+|6| $ git push -u origin test | PUSH your changes to your "test"-branch (*) |
+|7| $ git checkout master | OPTIONAL: checkout to your other branch (must exist and name must match) |
+|8| $ git merge test | CAREFUL: Only works if you are in the source branch (like "master") and "drag in" the changes.  |
+
+(*) If every went well => While "checkouting between branches" you're only going to see your pushed content of your specific branch!
 
 <br />
 <br />
