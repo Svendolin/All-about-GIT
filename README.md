@@ -99,6 +99,31 @@ GIT BASH (for Windows) - INSTALLATION:
 ***
 <img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
 
+## &nbsp;How to UNDO MERGE if you accidentally made a mistake: ❌
+***
+
+* **IMPORTANT GENERAL NOTE**: Merge is only the first command. After the merge, it needs an add, commit and push as usual. Your last commit is super important for the following case 0
+* Please note: Step 1.1 is going to be used if you want to make a reset on a CERTAIN STAGE!
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|0| $ git reset --merge HEAD~1 | Reverts to the last commit in your repository you've made (refers to the current state as it was right before)  |
+
+
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|1| $ git reset --merge a9fdeb5 | This command resets our repository to the state it was at in the a9fdeb5 commit on the master branch. NOTE: Use YOUR ID at step 2|
+|2| REPLACE a9fdeb5 with the ID  | Github > Repository (of your project) > click "commits" > Copy the ID of the state you want > paste it at STEP 1 and hit ENTER - Now your repo is staged based on your selcted ID |
+|3| Add > commit > push  | Process as usual |
+
+
+<br />
+<br />
+
+***
+<img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
+
 ## &nbsp;How to DELETE: ❌
 ***
 | STEP | COMMAND | EFFECT  | 
