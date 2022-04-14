@@ -134,7 +134,28 @@ GIT BASH (for Windows) - INSTALLATION:
 <br />
 <br />
 
+***
+<img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
 
+## &nbsp;How to CLONE a repository (your own or from someone else...)👨🏼‍🤝‍👨🏻
+***
+
+* If you want to get a copy of an existing Git repository — for example, a project you’d like to contribute to — the command you need is git clone.
+
+* Git receives a full copy of nearly all data that the server has. Every version of every file for the history of the project is pulled down by default when you run git clone.
+
+* In fact, if your server disk gets corrupted, you can often use nearly any of the clones on any client to set the server back to the state it was in when it was cloned
+
+* **It is therefore not necessary to download the repository as a ZIP file, then unpack it and paste it into the code editor.**
+
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|0| First Step | Create a new folder > Open VSC > Open your Terminal|
+|1| $ git clone (#) | (#) Copy the "https:Link" of the desired Repository when you click on the "code"-button (The third button beside "Go to file" and "Add file") and paste it behind the command |
+
+<br />
+<br />
 
 ***
 ## Collaboration ✅
