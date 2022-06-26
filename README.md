@@ -8,7 +8,7 @@
 
 This "All-about-GIT"-repository catches up its focus on all the USEFUL GIT COMMANDS I did during my projects through the years as a **SAE-Web Development** student with exercise lessons every week as well as tutorial videos on _Youtube_.
 
-👍GOOD TO KNOW:
+👍GOOD TO KNOW:🤗
 
 => `GIT` is a free and open source distributed version control system designed to handle everything from small to very large projects.
 
