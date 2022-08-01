@@ -66,7 +66,7 @@ GIT BASH (for Windows) - INSTALLATION:
 |:--------------| :--------------| :--------------|
 |1| FOLDER CHECK | Check if you are in the right output folder where git has been initialized |
 |2| $ cd ../ or: dollar ld | CHANGE directory or SHOW the CONTENT of your directoy to adjust your folder output if necessary |
-|3| $ git pull | CHECK of undone changes (conflicts) and decide which change you want to make if necessary |
+|3| $ git pull | CHECK of undone changes (conflicts) and decide which change you want to make if necessary. A pull request will synchronise your remote data |
 |4| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) |
 |5| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") |
 |6| $ git push -u origin master | PUSH your changes - (master if your branch is named "master", otherwhise say the right name) |
