@@ -93,6 +93,8 @@ GIT BASH (for Windows) - INSTALLATION:
 
 (*) If every went well => While "checkouting between branches" you're only going to see your pushed content of your specific branch!
 
+<img align="center" alt="Github" width="" src="https://w3cschoool.com/public/file/Git/git-pull2.png" /> 
+
 <br />
 <br />
 
