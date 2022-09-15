@@ -2,9 +2,9 @@
 
 
 ***
-<img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" /> 
+<img align="left" alt="git logo" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" /> 
 
-# &nbsp;- ALL ABOUT GIT - ✔
+# &nbsp;- ALL ABOUT GIT and GITHUB - ✔
 
 This "All-about-GIT"-repository catches up its focus on all the USEFUL GIT COMMANDS I did during my projects through the years as a **SAE-Web Development** student with exercise lessons every week as well as tutorial videos on _Youtube_.
 
@@ -23,6 +23,7 @@ This "All-about-GIT"-repository catches up its focus on all the USEFUL GIT COMMA
 => `GITHUB` is a network-based version management service (WEBSITE TO HOST) for software development projects. It was named after the version management system Git.
 
 => `VERSION CONTROL` is basicall what we do with GIT. We track our code changes as programmer and save an initial code in GIT until we update or undo some changes to it. After all we can control and see the whole history of changes.
+
         
 <br />
 <br />
@@ -107,8 +108,8 @@ GIT BASH (for Windows) - INSTALLATION:
 
 | TERM | MEANING  | 
 |:--------------| :--------------|
-| Workspace| Your local computer |
-| Repository| Project / Folder place where your project is kept |
+| Workspace| Your local computer > "adds" the changes to the index > "commits" the changes with a message to your repo |
+| Repository| Project / Folder place "Ablage / Aufbewahrungsort" where your project is kept > "push" the changes to the remote |
 | Remote| Remote Repository like GITHUB where your projects are hosted / placed on an external server (like Dropbox, but for Code) |
 | PULL | Download change from the REMOTE to your WORKSPACE (local machine) which is the opposite of push |
 | PUSH | Upload GIT commits from your REPOSITORY to a REMOTE which is the opposite of pull |
