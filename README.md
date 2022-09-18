@@ -4,7 +4,13 @@
 ***
 <img align="left" alt="git logo" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" /> 
 
-# &nbsp;- ALL ABOUT GIT and GITHUB - ✔
+<img align="left" alt="git logo" width="35px" style="margin-left:10px" src="https://cdn-icons-png.flaticon.com/512/5968/5968896.png" /> 
+
+<img align="left" alt="JavaScript" width="35px" style="margin-left:10px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/1200px-Github-desktop-logo-symbol.svg.png" /> 
+
+<img align="left" alt="JavaScript" width="35px" style="margin-left:10px" src="https://github.githubassets.com/images/modules/site/copilot/copilot.png" /> 
+
+# &nbsp;- ALL ABOUT GIT / GITHUB / GITHUB DESKTOP / GITHUB COPILOT - ✔
 
 This "All-about-GIT"-repository catches up its focus on all the USEFUL GIT COMMANDS I did during my projects through the years as a **SAE-Web Development** student with exercise lessons every week as well as tutorial videos on _Youtube_.
 
@@ -33,7 +39,20 @@ This "All-about-GIT"-repository catches up its focus on all the USEFUL GIT COMMA
 ***
 
 GIT BASH (for Windows) - INSTALLATION:
+* (BASIC variant to pull, add, commit, push and merge code to your projects)
 * https://gitforwindows.org/
+
+GITHUB DESKTOP (for Windows) - INSTALLATION:
+* (SIMPLIFIED variant to pull, add, commit, push and merge code to your projects)
+* Explenations futher down below!
+* https://desktop.github.com/
+
+GITHUB COPILOT (for Windows) - INSTALLATION:
+* (AI pair programmer which uses OpenAI Codex to suggest code and entire functions)
+* You can use natural language (either write it directly or describe it as a comment) to compile it
+* https://github.com/features/copilot (download)
+* https://docs.github.com/en/copilot (documentations)
+
 
 
 <br />
@@ -117,6 +136,10 @@ GIT BASH (for Windows) - INSTALLATION:
 <br />
 <br />
 
+***
+
+<img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
+
 ## &nbsp;How to UNDO MERGE if you accidentally made a mistake: ❌
 ***
 
@@ -175,6 +198,24 @@ GIT BASH (for Windows) - INSTALLATION:
 |:--------------| :--------------| :--------------|
 |0| First Step | Create a new folder > Open VSC > Open your Terminal|
 |1| $ git clone (#) | (#) Copy the "https:Link" of the desired Repository when you click on the "code"-button (The third button beside "Go to file" and "Add file") and paste it behind the command |
+
+<br />
+<br />
+
+***
+<img align="left" alt="JavaScript" width="35px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/1200px-Github-desktop-logo-symbol.svg.png" /> 
+
+## &nbsp;GITHUB DEKSTOP 👨🏼‍🤝
+***
+
+* ...is the simplified version (desktop based as the name already reveals) of github beside the regular version on github.com
+* ...relies on simple click commands and drag and drop mechanisms instead of the usual commands via terminal
+* ...must be downloaded locally to your computer which is linked to the Github account. The projects and repositories are synchronized and retrieved from the Github server at any time.
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|1| ... | ... |
+
 
 <br />
 <br />
