@@ -30,6 +30,8 @@ This "All-about-GIT"-repository catches up its focus on all the USEFUL GIT COMMA
 
 => `VERSION CONTROL` is basicall what we do with GIT. We track our code changes as programmer and save an initial code in GIT until we update or undo some changes to it. After all we can control and see the whole history of changes.
 
+=> `.git` stores all of the files that saves the history of your project from commit to commit. It's a hidden folder in your project folder. With "$ ls -la" you can see all the hidden files and folders in your project folder.
+
         
 <br />
 <br />
@@ -73,10 +75,10 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 |6| readme.md | Write a readme.md in your explorer of VSC as a first commit to make |
 |7| $ git add readme.md | ADD your change to the git (ready to track in GIT) |
 |8| $ git commit -m "first commit" | COMMIT your first change |
-|9| $ git branch -M main | OPTIONAL: Change the branch name from master to main |
+|9| $ git branch -m main | OPTIONAL: Change the branch name from master to main |
 |10| $ git remote add origin (#) | REMOTE them with the github HTTPS link  |
-|11| $ git push -u origin master | PUSH your changes - (If you did step 9, master would be main) |
-|12| $ git status | STATUS check to make sure everything went right |
+|11| $ git push -u origin master | PUSH your changes - (If you did step 9, master would be main) -u means "set upstream" |
+|12| $ git status | STATUS check to make sure everything went right (shows what was updated, deleted etc but havent been saved in a commit yet) |
 |13| $ git log | LOG shows your structure |
 |14| Now its time to make some changes:
 
@@ -95,8 +97,8 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 |1| FOLDER CHECK | Check if you are in the right output folder where git has been initialized |
 |2| $ cd ../ or: dollar ld | CHANGE directory or SHOW the CONTENT of your directoy to adjust your folder output if necessary |
 |3| $ git pull | CHECK of undone changes (conflicts) and decide which change you want to make if necessary. A pull request will synchronise your remote data |
-|4| $ git add . | ADD what you changed (ready to track in GIT) The "." means "ADD ALL FILES", but you can also name an exact file from the explorer if you wish |
-|5| $ git commit -m "" | COMMIT a message to say what you changed (Write a desctiption between "") - It saves your files in GIT |
+|4| $ git add . | ADD what you changed (ready to track in GIT) The "." means "ADD ALL FILES", but you can also name an exact file from the explorer if you wish like "add index.html" |
+|5| $ git commit -m "" | COMMIT a message to say what you changed (Write a desctiption between "", like what and why btw you can add a second one for the description) - It saves your files in GIT |
 |6| $ git push -u origin master | PUSH your changes (means upload GIT commits to a remote repository like GITHUB) - (btw master if your branch is named "master", otherwhise say the right name) |
 |7| $ git status | STATUS check to make sure everything went right |
 
@@ -128,10 +130,11 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 | TERM | MEANING  | 
 |:--------------| :--------------|
 | Workspace| Your local computer > "adds" the changes to the index > "commits" the changes with a message to your repo |
-| Repository| Project / Folder place "Ablage / Aufbewahrungsort" where your project is kept > "push" the changes to the remote |
+| Repository| Project / Folder place "Ablage bzw Schublade / Aufbewahrungsort" where your project is kept > "push" the changes to the remote |
 | Remote| Remote Repository like GITHUB where your projects are hosted / placed on an external server (like Dropbox, but for Code) |
 | PULL | Download change from the REMOTE to your WORKSPACE (local machine) which is the opposite of push |
 | PUSH | Upload GIT commits from your REPOSITORY to a REMOTE which is the opposite of pull |
+| CLONE | Clone a repository (Project) from a REMOTE (hosted hub) to your WORKSPACE (local machine) |
 
 <br />
 <br />
