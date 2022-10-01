@@ -24,6 +24,8 @@ This "All-about-GIT"-repository catches up its focus on all the USEFUL GIT COMMA
 * In Visual Studio Code you can either click on "Terminal" > "New Terminal" (CTRL + SHIFT + ö) to OPEN A NEW TERMINAL
 * or you can right-click on your explorer file and OPEN IN INTEGRATED TERMINAL (that means you open a terminal with the desired path)
 
+TAB is your friend! If you type in a command and press TAB, it will autocomplete the command for you. If you press TAB twice, it will show you all the possible commands that start with the letters you typed in.
+
 => `CLI` is known as Command Line Interface. Some programs require to interact with them via text commands (typing in some explicit text to run or make changes to the application).
 
 => `GITHUB` is a network-based version management service (WEBSITE TO HOST) for software development projects. It was named after the version management system Git.
@@ -73,14 +75,14 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 |4| $ git config user.name "" | OPTIONAL: configurate the terminal with your name (useful if you work on different computers) |
 |5| $ git config user.email "" | OPTIONAL: configurate the terminal with your email (useful if you work on different computers) |
 |6| readme.md | Write a readme.md in your explorer of VSC as a first commit to make |
-|7| $ git add readme.md | ADD your change to the git (ready to track in GIT) |
+|7| $ git add readme.md | ADD your change to the git (ready to track in GIT) - Stages the changes to your index |
 |8| $ git commit -m "first commit" | COMMIT your first change |
 |9| $ git branch -m main | OPTIONAL: Change the branch name from master to main |
 |10| $ git remote add origin (#) | REMOTE them with the github HTTPS link  |
 |11| $ git push -u origin master | PUSH your changes - (If you did step 9, master would be main) -u means "set upstream" |
 |12| $ git status | STATUS check to make sure everything went right (shows what was updated, deleted etc but havent been saved in a commit yet) |
 |13| $ git log | LOG shows your structure |
-|14| Now its time to make some changes:
+|14| Now its time to make some changes: | (...)
 
 <br />
 <br />
@@ -96,32 +98,12 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 |:--------------| :--------------| :--------------|
 |1| FOLDER CHECK | Check if you are in the right output folder where git has been initialized |
 |2| $ cd ../ or: dollar ld | CHANGE directory or SHOW the CONTENT of your directoy to adjust your folder output if necessary |
-|3| $ git pull | CHECK of undone changes (conflicts) and decide which change you want to make if necessary. A pull request will synchronise your remote data |
+|3| $ git pull | CHECK of undone changes (conflicts) and decide which change you want to make if necessary. A pull request will synchronise your remote data (code review before we merge changes in) |
 |4| $ git add . | ADD what you changed (ready to track in GIT) The "." means "ADD ALL FILES", but you can also name an exact file from the explorer if you wish like "add index.html" |
 |5| $ git commit -m "" | COMMIT a message to say what you changed (Write a desctiption between "", like what and why btw you can add a second one for the description) - It saves your files in GIT |
 |6| $ git push -u origin master | PUSH your changes (means upload GIT commits to a remote repository like GITHUB) - (btw master if your branch is named "master", otherwhise say the right name) |
 |7| $ git status | STATUS check to make sure everything went right |
 
-<br />
-<br />
-
-***
-<img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
-
-## &nbsp;How to MAKE, ADD + PUSH and MERGE BRANCHES: ✅ (Working non-destructive)
-***
-| STEP | COMMAND | EFFECT  | 
-|:--------------| :--------------| :--------------|
-|1| $ git branch test | CREATE a new branch which is called "test" |
-|2| $ git checkout test | CHECKOUT to your new branch (you switch over from your other branch to your "test" branch) |
-|3| $ git status | OPTIONAL: STATUS check to make sure everything went right |
-|4| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) |
-|5| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") |
-|6| $ git push -u origin test | PUSH your changes to your "test"-branch (*) |
-|7| $ git checkout master | OPTIONAL: checkout to your other branch (must exist and name must match) |
-|8| $ git merge test | CAREFUL: Only works if you are in the source branch (like "master") and "drag in" the changes.  |
-
-(*) If every went well => While "checkouting between branches" you're only going to see your pushed content of your specific branch!
 
 <img text-align="center" alt="Github" width="" src="https://w3cschoool.com/public/file/Git/git-pull2.png" /> 
 
@@ -130,11 +112,55 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 | TERM | MEANING  | 
 |:--------------| :--------------|
 | Workspace| Your local computer > "adds" the changes to the index > "commits" the changes with a message to your repo |
+| Index | Stages changes: The added changes will be stored in a personal index "lokaler Zwischenspeicher" to make it ready for tracking the changes to the Repo (your project)  |
 | Repository| Project / Folder place "Ablage bzw Schublade / Aufbewahrungsort" where your project is kept > "push" the changes to the remote |
 | Remote| Remote Repository like GITHUB where your projects are hosted / placed on an external server (like Dropbox, but for Code) |
-| PULL | Download change from the REMOTE to your WORKSPACE (local machine) which is the opposite of push |
+| PULL | Download change from the REMOTE (Github) to your WORKSPACE (local machine) which is the opposite of push. It's also a CHECK of undone changes (conflicts) A pull request will synchronise your remote data (code review before we merge changes in)  |
 | PUSH | Upload GIT commits from your REPOSITORY to a REMOTE which is the opposite of pull |
 | CLONE | Clone a repository (Project) from a REMOTE (hosted hub) to your WORKSPACE (local machine) |
+
+<br />
+<br />
+
+***
+<img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
+
+## &nbsp;GIT BRANCHING: How to MAKE, ADD + PUSH and MERGE BRANCHES: ✅ (Working non-destructive)
+***
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|1| $ git branch | SHOWS how many branches are made in this project |
+|2| $ git checkout -b feature | CREATES a new branch which is called "feature" and also CHECKOUTS to your new branch (you switch over from your master branch to your "feature" branch)  |
+|2.1| $ git checkout master | OPTIONAL: CHECKOUTS back to your master branch. To continue: Switch back to feature with "$ git checkout feature" |
+|3| $ git status | OPTIONAL: STATUS check to make sure everything went right |
+|4| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) Note: your changes will be only added to your feature branch |
+|5| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") Note: This will be ONLY commited and saved to your feature branch |
+|6| $ git push -u origin feature | PUSH your changes from your "feature"-branch to your remote (Github) (*) Watch further at 48:15 |
+|6.0| $ git checkout master | CHECK IF THAT WORKS |
+|6.1| $ git merge feature | CAREFUL: Only works if you are in the source branch (like "master") and "drag in" the changes.  |
+
+
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|7| $ git branch | SHOWS how many branches are made in this project |
+|8| $ git checkout master  | Checkout to your other branch (must exist and name must match, thats why you should have checked it with git branch) CHECKOUT is used to switch between branches! |
+|9| $ git diff feature | Shows what changes have been made compared to MASTER and FEATURE branch |
+|8| 
+
+
+<img text-align="center" alt="Github" width="" src="https://docs.wavemaker.com/learn/assets/branching-model.png" />
+
+* **MASTER BRANCH**: Your main working tree. It's the default branch when you create a repository. You can think of it as the "production" branch. It's where you MERGE changes from other branches. 
+
+* **FEATURE BRANCH**: A branch that you create to work on a new feature. It's where you ADD changes to your project. All changes are made, added, committed and pushed in a feature branch until you MERGE them into the master branch when they're ready.
+
+* **MERGE**: means to combine the changes from one branch into another branch. You can also think of it as a "release" branch. 
+Usually you merge a feature branch (in this example its called "feature") into the master branch.
+
+* **BUGFIX BRANCH**: A branch that you create to fix a bug (like a hot fix) which is done seperately.
+
 
 <br />
 <br />
