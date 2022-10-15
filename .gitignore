@@ -1,1 +1,10 @@
+# ignores the notes.txt file
 /notes.txt
+
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+# https://www.w3schools.com/git/git_ignore.asp

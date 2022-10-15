@@ -34,6 +34,12 @@ TAB is your friend! If you type in a command and press TAB, it will autocomplete
 
 => `.git` stores all of the files that saves the history of your project from commit to commit. It's a hidden folder in your project folder. With "$ ls -la" you can see all the hidden files and folders in your project folder.
 
+=> `.gitignore` is a file that tells Git which files (or patterns) it should ignore. It's a hidden file in your project folder. With `"$ ls -la"` you can see all the hidden files and folders in your project folder. Create a new file called .gitignore and write in the files you want to ignore.
+
+=> `Q` cleans the actual command of the terminal while `CTRL + C` stops the process and `$ git clear` clears the terminal from all the text.
+
+=> `TAB` is your friend! If you type in a command and press TAB, it will autocomplete the command for you. If you press TAB twice, it will show you all the possible commands that start with the letters you typed in.
+
         
 <br />
 <br />
@@ -118,6 +124,7 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 | PULL | Download change from the REMOTE (Github) to your WORKSPACE (local machine) which is the opposite of push. It's also a CHECK of undone changes (conflicts) A pull request will synchronise your remote data (code review before we merge changes in)  |
 | PUSH | Upload GIT commits from your REPOSITORY to a REMOTE which is the opposite of pull |
 | CLONE | Clone a repository (Project) from a REMOTE (hosted hub) to your WORKSPACE (local machine) |
+| MERGE | Joins two or more development histories together. It is used by the git pull command to incorporate changes from a different repository and can be used by hand to resolve conflicts. |
 
 <br />
 <br />
@@ -127,27 +134,51 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 
 ## &nbsp;GIT BRANCHING: How to MAKE, ADD + PUSH and MERGE BRANCHES: ✅ (Working non-destructive)
 ***
+**EASY WAY WITH TERMINAL IN VSC (step 1 - 5) AND GITHUB INTERFACE (step 6 - 7.1)**
+* Step 1 to 5.1: Create, add, commit and push your code changes into a new branch
+* Step 6 to 7.1: Create a pull request to merge your branch into the main branch (master)
+* Step 8 to 10: Update your master branch locally on your workspace by pulling the changes from the remote master branch and delete the feature branch.
 
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
-|1| $ git branch | SHOWS how many branches are made in this project |
-|2| $ git checkout -b feature | CREATES a new branch which is called "feature" and also CHECKOUTS to your new branch (you switch over from your master branch to your "feature" branch)  |
-|2.1| $ git checkout master | OPTIONAL: CHECKOUTS back to your master branch. To continue: Switch back to feature with "$ git checkout feature" |
-|3| $ git status | OPTIONAL: STATUS check to make sure everything went right |
-|4| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) Note: your changes will be only added to your feature branch |
-|5| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") Note: This will be ONLY commited and saved to your feature branch |
-|6| $ git push -u origin feature | PUSH your changes from your "feature"-branch to your remote (Github) (*) Watch further at 48:15 |
-|6.0| $ git checkout master | CHECK IF THAT WORKS |
-|6.1| $ git merge feature | CAREFUL: Only works if you are in the source branch (like "master") and "drag in" the changes.  |
+|1| $ git branch | SHOWS how many branches are made in this project (green coloured branch name and *) |
+|2| $ git checkout -b feature | CREATES a new branch which is called "feature" and also CHECKOUTS to your new branch (you switch over from your master branch to your "feature" branch which is independant to your other branches)  |
+|2.1| $ git checkout master | OPTIONAL: CHECKOUTS back to your master branch. TO CONTINUE: Switch back to feature with "$ git checkout feature" |
+|2.2| $ git status | OPTIONAL: STATUS check to make sure everything went right (and if there way something modified) |
+|3| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) Note: your changes will be only added (and also SEEN) to your feature branch |
+|4| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") Note: This will be ONLY commited and saved to your feature branch |
+|5| $ git push -u origin feature | PUSHES your changes from the repository to the GITHUB remote. BUT Github will now inform you about COMPARING and PULLING the changes => Code from FEATURE BRANCH is ready to be pulled into the MASTER BRANCH |
+|5.1| "push command" | You can push as many changes if you want to your feature branch by repeating step 3 to 5 after you made some coding changes |
+|6| GITHUB Interface => Able to Merge | Go to your repository on GITHUB and open a pull request > compare the feautre branch with the base branch (in this case "master") and be sure that "able to merge" is checked |
+|6.1| Conversation / Commits and Checks | OPTIONAL: You can also check the conversation, commits, checks and "files changed" sections (also comment lines and resolve conversations) before you merge it |
+|7| Merge Pull Request | Click the button and confirm it > PR (Pull Request) should be sucessfully merged! |
+|7.1| Delete branch | OPTIONAL: Github will inform you that pull request is successfully merged and closed so the feature branch can be safely deleted OR do it at the end with step 10 |
+|8| $ git checkout master | CHECKOUTS back to your master branch to see that your local changes from the master branch haven't been updated yet |
+|9| $ git pull | PULLS the changes from the remote repository to your local machine (workspace) |
+|10| $ git branch -d feature | DELETES the feature branch |
 
+<br>
+<br>
+
+**REGULAR WAY WITH TERMINAL USE IN VSC AND NO GITHUB INTERFACE:**
+* Step 1 to 5.1: Create, add, commit and push your code changes into a new branch
+* Step 6 to 7.1: Create a pull request to merge your branch into the main branch (master)
 
 
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
-|7| $ git branch | SHOWS how many branches are made in this project |
-|8| $ git checkout master  | Checkout to your other branch (must exist and name must match, thats why you should have checked it with git branch) CHECKOUT is used to switch between branches! |
-|9| $ git diff feature | Shows what changes have been made compared to MASTER and FEATURE branch |
-|8| 
+|1| $ git branch | SHOWS how many branches are made in this project (green coloured branch name and *) |
+|2| $ git checkout -b feature | CREATES a new branch which is called "feature" and also CHECKOUTS to your new branch (you switch over from your master branch to your "feature" branch which is independant to your other branches)  |
+|2.1| $ git checkout master | OPTIONAL: CHECKOUTS back to your master branch. TO CONTINUE: Switch back to feature with "$ git checkout feature" |
+|2.2| $ git status | OPTIONAL: STATUS check to make sure everything went right (and if there way something modified) |
+|3| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) Note: your changes will be only added (and also SEEN) to your feature branch |
+|4| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") Note: This will be ONLY commited and saved to your feature branch |
+|5.0| $ git checkout master | Go back to your master branch. Now you'll stay there! |
+|5.1| $ git diff master..feature | SHOWS MASTER vs FEATURE changes: which files got a change, so basically what's new and what's old |
+|5.2| $ git merge feature | Join the changes from the feature branch into master branch |
+|5.3| $ git pull | NECESSARY if there have been made some possible changes in between. It PULLS the Changes from the remote (Github) to your local machine (Workspace) to show you the conflict (current vs incoming change) - Decide if you want to accept the current change, the incoming change or both |
+|5.4| $ git push -u origin master | Push your desired changes from your repository to the remote (Github) |
+|5.5| (...) | If you switch back to your feature branch, you'll see that your changes are accepted by the masterbranch. Now you just need the synchronize it on VSC by hitting the commit button |
 
 
 <img text-align="center" alt="Github" width="" src="https://docs.wavemaker.com/learn/assets/branching-model.png" />
@@ -159,7 +190,7 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 * **MERGE**: means to combine the changes from one branch into another branch. You can also think of it as a "release" branch. 
 Usually you merge a feature branch (in this example its called "feature") into the master branch.
 
-* **BUGFIX BRANCH**: A branch that you create to fix a bug (like a hot fix) which is done seperately.
+* **BUGFIX BRANCH**: A branch that you create to fix a bug (like a hot fix) which is done seperately on its own branch. But GENERALLY this branch is not needed anymore and can be deleted.
 
 
 <br />
@@ -198,11 +229,11 @@ Usually you merge a feature branch (in this example its called "feature") into t
 ***
 <img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
 
-## &nbsp;How to DELETE: ❌
+## &nbsp;How to DELETE BRANCHES: ❌
 ***
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
-|1| $ git branch -d test | CAREFUL: Deletes your "test" branch with all your adjustments inside |
+|1| $ git branch -d feature | CAREFUL: Deletes your "feature" branch  |
 
 
 <br />
