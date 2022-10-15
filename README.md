@@ -24,8 +24,6 @@ This "All-about-GIT"-repository catches up its focus on all the USEFUL GIT COMMA
 * In Visual Studio Code you can either click on "Terminal" > "New Terminal" (CTRL + SHIFT + ö) to OPEN A NEW TERMINAL
 * or you can right-click on your explorer file and OPEN IN INTEGRATED TERMINAL (that means you open a terminal with the desired path)
 
-TAB is your friend! If you type in a command and press TAB, it will autocomplete the command for you. If you press TAB twice, it will show you all the possible commands that start with the letters you typed in.
-
 => `CLI` is known as Command Line Interface. Some programs require to interact with them via text commands (typing in some explicit text to run or make changes to the application).
 
 => `GITHUB` is a network-based version management service (WEBSITE TO HOST) for software development projects. It was named after the version management system Git.
@@ -134,8 +132,8 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 
 ## &nbsp;GIT BRANCHING: How to MAKE, ADD + PUSH and MERGE BRANCHES: ✅ (Working non-destructive)
 ***
-**EASY WAY WITH TERMINAL IN VSC (step 1 - 5) AND GITHUB INTERFACE (step 6 - 7.1)**
-* Step 1 to 5.1: Create, add, commit and push your code changes into a new branch
+**EASY WAY WITH TERMINAL IN VSC (step 1 - 5), GITHUB INTERFACE (step 6 - 7.1) AND BACK IN VSC for (step 8 - 10)**
+* Step 1 to 5.1: Create, add, commit and push your code changes into a new branch locally in VSC
 * Step 6 to 7.1: Create a pull request to merge your branch into the main branch (master)
 * Step 8 to 10: Update your master branch locally on your workspace by pulling the changes from the remote master branch and delete the feature branch.
 
@@ -160,25 +158,34 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 <br>
 <br>
 
-**REGULAR WAY WITH TERMINAL USE IN VSC AND NO GITHUB INTERFACE:**
-* Step 1 to 5.1: Create, add, commit and push your code changes into a new branch
-* Step 6 to 7.1: Create a pull request to merge your branch into the main branch (master)
+**REGULAR FAST-FORWARD WAY WITH TERMINAL USE IN VSC:**
+* Step 1 to 4.1: Create, add and commit your code changes into a new feature branch
+* Step 5 to 7: Merge, pull and push your feature branch into the master branch (fast-forward from your master branch)
 
 
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
 |1| $ git branch | SHOWS how many branches are made in this project (green coloured branch name and *) |
 |2| $ git checkout -b feature | CREATES a new branch which is called "feature" and also CHECKOUTS to your new branch (you switch over from your master branch to your "feature" branch which is independant to your other branches)  |
-|2.1| $ git checkout master | OPTIONAL: CHECKOUTS back to your master branch. TO CONTINUE: Switch back to feature with "$ git checkout feature" |
-|2.2| $ git status | OPTIONAL: STATUS check to make sure everything went right (and if there way something modified) |
+|2.1| $ git checkout master | OPTIONAL: CHECKOUTS to your master branch |
+|2.2| $ git checkout feature | SWITCHES BACK to feature with "$ git checkout feature" |
+|2.3| $ git status | OPTIONAL: STATUS check to make sure everything went right (and if there way something modified) |
 |3| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) Note: your changes will be only added (and also SEEN) to your feature branch |
 |4| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") Note: This will be ONLY commited and saved to your feature branch |
-|5.0| $ git checkout master | Go back to your master branch. Now you'll stay there! |
-|5.1| $ git diff master..feature | SHOWS MASTER vs FEATURE changes: which files got a change, so basically what's new and what's old |
-|5.2| $ git merge feature | Join the changes from the feature branch into master branch |
-|5.3| $ git pull | NECESSARY if there have been made some possible changes in between. It PULLS the Changes from the remote (Github) to your local machine (Workspace) to show you the conflict (current vs incoming change) - Decide if you want to accept the current change, the incoming change or both |
-|5.4| $ git push -u origin master | Push your desired changes from your repository to the remote (Github) |
-|5.5| (...) | If you switch back to your feature branch, you'll see that your changes are accepted by the masterbranch. Now you just need the synchronize it on VSC by hitting the commit button |
+|4.1| $ git diff master | SHOWS MASTER vs FEATURE changes: which files got a change, so basically what's new and what's old |
+|5| $ git checkout master | Go back to your master branch. Now you'll stay there! |
+|6| $ git merge feature | FAST FORWARD: JOIN the changes from the feature branch into master branch |
+|6.1| $ git pull | OPTIONAL: If there have been made some possible changes in between (especially if you have pushed some changes before). It PULLS the Changes from the remote (Github) to your local machine (Workspace) to show you the conflict (current vs incoming change) - Decide if you want to accept the current change, the incoming change or both |
+|7| $ git push -u origin master | Push your desired changes from your repository to the remote (Github) / Thats actually the part where you synchronize everything together to be up todate on remote as well as on your workspace |
+
+<br>
+
+**NOTE FOR "STAGING":**
+
+*If you have made changes to the same line of code in both the Feature Branch as well as the Master Branch, you can no longer switch from the Master Branch to the feauture branch! ADD and COMMIT on the master first > Checkout to your feature branch > check the changes with "git diff master" in feature branch and stay there > Keep your personal feature branch upt to date by "$ git merge master" > Merge Conflict (current = changes from feature branch, the branch where you lastly checkouted btw VS Incoming changes from the master branch) > Then do add and commit again*
+
+<br>
+<br>
 
 
 <img text-align="center" alt="Github" width="" src="https://docs.wavemaker.com/learn/assets/branching-model.png" />
