@@ -85,7 +85,7 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 |10| $ git remote add origin (#) | REMOTE them with the github HTTPS link  |
 |11| $ git push -u origin master | PUSH your changes - (If you did step 9, master would be main) -u means "set upstream" |
 |12| $ git status | STATUS check to make sure everything went right (shows what was updated, deleted etc but havent been saved in a commit yet) |
-|13| $ git log | LOG shows your structure |
+|13| $ git log | LOG shows your structure (list of done commits) |
 |14| Now its time to make some changes: | (...)
 
 <br />
@@ -217,18 +217,46 @@ Usually you merge a feature branch (in this example its called "feature") into t
 * 🟢-Lines show added content in this commit
 * ⚪-Lines show that these parts weren't changed through this commit
 
-| STEP | COMMAND | EFFECT  | 
-|:--------------| :--------------| :--------------|
-|0| $ git reset --merge HEAD~1 | Reverts to the last commit in your repository you've made (refers to the current state as it was right before)  |
+<br />
 
-
+**UNDO MERGE**:
 
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
-|1| $ git reset --merge a9fdeb5 | This command resets our repository to the state it was at in the a9fdeb5 commit on the master branch. NOTE: Use YOUR ID at step 2|
+|0| $ git reset --merge HEAD~1 | UNDO this MERGE: Reverts to the last commit in your repository you've made (refers to the current state as it was right before)  |
+
+<br />
+
+**UNDO COMMIT**:
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|0| $ git reset HEAD~1 | UNDO the last commit and unstages the changes again  |
+
+<br />
+
+
+**UNSTAGE TO A CERTAIN COMMIT STAGE BY USING HASHES**:
+
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|0| $ git log | LISTS all the recent commits whcih have been made so far  |
+|1| $ git reset a9fdeb5 | This command resets our repository TO THE STATE it was at in the a9fdeb5 commit on the master branch. NOTE: Use YOUR ID at step 2|
 |2| REPLACE a9fdeb5 with the ID  | Github > Repository (of your project) > click "commits" > Copy the ID of the state you want > paste it at STEP 1 and hit ENTER - Now your repo is staged based on your selcted ID |
 |3| Add > commit > push  | Process as usual |
 
+<br />
+
+**COMPLETELY REMOVE THE CHANGES TO A CERTAIN STATE BY USING A HARD RESET**:
+
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|0| $ git log | LISTS all the recent commits whcih have been made so far  |
+|1| $ git reset --hard a9fdeb5 | This command resets our repository TO THE STATE it was at in the a9fdeb5 commit on the master branch and DELETES EVERYTHING which happened until this commit. The staged commits before will remain as untouched|
+|2| REPLACE a9fdeb5 with the ID  | Github > Repository (of your project) > click "commits" > Copy the ID of the state you want > paste it at STEP 1 and hit ENTER - Now your repo is staged based on your selcted ID |
+|3| Add > commit > push  | Process as usual |
 
 <br />
 <br />
