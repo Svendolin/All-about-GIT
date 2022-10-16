@@ -207,11 +207,10 @@ Usually you merge a feature branch (in this example its called "feature") into t
 
 <img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
 
-## &nbsp;How to UNDO MERGE if you accidentally made a mistake: ❌
+## &nbsp;How to UNDO MERGES / COMMITS if you accidentally made a mistake: ❌
 ***
 
-* **IMPORTANT GENERAL NOTE**: Merge is only the first command. After the merge, it needs an add, commit and push as usual. Your last commit is super important for the following case 0
-* Please note: Step 1.1 is going to be used if you want to make a reset on a CERTAIN STAGE!
+
 * CHECK OUT the "commits" section in your github repo to get an overview of the amount of commits you've done in the chosen project. Each commit has its own ID-Number which is important for the upcomig process:
 * 🔴-Lines show deleted content in this commit
 * 🟢-Lines show added content in this commit
