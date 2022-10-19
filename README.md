@@ -159,7 +159,7 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 <br>
 
 **REGULAR FAST-FORWARD WAY WITH TERMINAL USE IN VSC:**
-* Step 1 to 4.1: Create, add and commit your code changes into a new feature branch
+* Step 1 to 4.1: Create, add and commit your code changes into a new feature branch (no push)
 * Step 5 to 7: Merge, pull and push your feature branch into the master branch (fast-forward from your master branch)
 
 
@@ -173,8 +173,9 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 |3| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) Note: your changes will be only added (and also SEEN) to your feature branch |
 |4| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") Note: This will be ONLY commited and saved to your feature branch |
 |4.1| $ git diff master | SHOWS MASTER vs FEATURE changes: which files got a change, so basically what's new and what's old |
+|-|--|--|
 |5| $ git checkout master | Go back to your master branch. Now you'll stay there! |
-|6| $ git merge feature | FAST FORWARD: JOIN the changes from the feature branch into master branch |
+|6| $ git merge feature | FAST FORWARD: JOIN the changes from the feature branch into master branch (merge = "zusammenführen: feature Inhalte in den Master") |
 |6.1| $ git pull | OPTIONAL: If there have been made some possible changes in between (especially if you have pushed some changes before). It PULLS the Changes from the remote (Github) to your local machine (Workspace) to show you the conflict (current vs incoming change) - Decide if you want to accept the current change, the incoming change or both |
 |7| $ git push -u origin master | Push your desired changes from your repository to the remote (Github) / Thats actually the part where you synchronize everything together to be up todate on remote as well as on your workspace |
 
@@ -199,6 +200,25 @@ Usually you merge a feature branch (in this example its called "feature") into t
 
 * **BUGFIX BRANCH**: A branch that you create to fix a bug (like a hot fix) which is done seperately on its own branch. But GENERALLY this branch is not needed anymore and can be deleted.
 
+
+<br />
+<br />
+
+***
+
+<img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
+
+## &nbsp;SHOW Commits 👀
+***
+
+**SHOW COMMIT**:
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|1| $ git log | OVERVIEW of the commits which have been made in this branch  |
+|2| COPY the commit ID (First 7 letters) | commit 6ea139a009... = Each commit has its own ID (also shown in the GITHUB repo > commits) => Make a copy with ctrl + c of the first 7 letters |
+
+<br />
 
 <br />
 <br />
