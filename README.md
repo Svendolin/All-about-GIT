@@ -12,9 +12,7 @@
 
 # &nbsp;- ALL ABOUT GIT / GITHUB / GITHUB DESKTOP / GITHUB COPILOT - ✔
 
-This "All-about-GIT"-repository catches up its focus on all the USEFUL GIT COMMANDS I did during my projects through the years as a **SAE-Web Development** student with exercise lessons every week as well as tutorial videos on _Youtube_.
 
-<br />
 
 👍GOOD TO KNOW:🤗
 
@@ -192,9 +190,6 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 <br>
 <br>
 
-
-<img text-align="center" alt="Github" width="" src="https://docs.wavemaker.com/learn/assets/branching-model.png" />
-
 * **MASTER BRANCH**: Your main working tree. It's the default branch when you create a repository. You can think of it as the "production" branch. It's where you MERGE changes from other branches. 
 
 * **FEATURE BRANCH**: A branch that you create to work on a new feature. It's where you ADD changes to your project. All changes are made, added, committed and pushed in a feature branch until you MERGE them into the master branch when they're ready.
@@ -322,17 +317,12 @@ Usually you merge a feature branch (in this example its called "feature") into t
 ***
 <img align="left" alt="JavaScript" width="35px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/1200px-Github-desktop-logo-symbol.svg.png" /> 
 
-## &nbsp;GITHUB DEKSTOP 👨🏼‍🤝
+## &nbsp;GITHUB DEKSTOP... 👨🏼‍🤝
 ***
 
-* ...is the simplified version (desktop based as the name already reveals) of github beside the regular version on github.com
-* ...relies on simple click commands and drag and drop mechanisms instead of the usual commands via terminal
-* ...must be downloaded locally to your computer which is linked to the Github account. The projects and repositories are synchronized and retrieved from the Github server at any time.
-
-| STEP | COMMAND | EFFECT  | 
-|:--------------| :--------------| :--------------|
-|1| ... | ... |
-
+* Is the simplified version (desktop based as the name already reveals) of github beside the regular version on github.com
+* Relies on simple click commands and drag and drop mechanisms instead of the usual commands via terminal
+* Must be downloaded locally to your computer which is linked to the Github account. The projects and repositories are synchronized and retrieved from the Github server at any time.
 
 <br />
 <br />
