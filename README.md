@@ -26,9 +26,9 @@
 
 => `GITHUB` is a network-based version management service (WEBSITE TO HOST) for software development projects. It was named after the version management system Git.
 
-=> `VERSION CONTROL` is basicall what we do with GIT. We track our code changes as programmer and save an initial code in GIT until we update or undo some changes to it. After all we can control and see the whole history of changes.
+=> `VERSION CONTROL` is basically what we do with GIT. We track our code changes as programmer and save an initial code in GIT until we update or undo some changes to it. After all we can control and see the whole history of changes.
 
-=> `.git` stores all of the files that saves the history of your project from commit to commit. It's a hidden folder in your project folder. With "$ ls -la" you can see all the hidden files and folders in your project folder.
+=> `.git` stores all of the files that saves the history of your project from commit to commit. It's a hidden folder in your project folder.
 
 => `.gitignore` is a file that tells Git which files (or patterns) it should ignore. It's a hidden file in your project folder. With `"$ ls -la"` you can see all the hidden files and folders in your project folder. Create a new file called .gitignore and write in the files you want to ignore.
 
