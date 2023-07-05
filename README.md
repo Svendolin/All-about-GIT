@@ -18,9 +18,9 @@
 
 => `GIT` is a free and open source distributed version control system (TOOL) designed to handle everything from small to very large projects.
 
-=> `Terminal` is an electronic hardware device that can be used for entering data (transcribing data) from a computer or a computing system. It's an interface on our computer to type in text commands.
-* In Visual Studio Code you can either click on "Terminal" > "New Terminal" (CTRL + SHIFT + ö) to OPEN A NEW TERMINAL
-* or you can right-click on your explorer file and OPEN IN INTEGRATED TERMINAL (that means you open a terminal with the desired path)
+=> `Terminal` is an electronic hardware device that can be used for entering data (transcribing data) from a computer or a computing system. It's an interface on our computer to type in text commands (command lines).
+* In Visual Studio Code you can either click on "Terminal" > "New Terminal" (CTRL + SHIFT + ö) to OPEN A NEW TERMINAL OR...
+* You can right-click on your explorer file and OPEN IN INTEGRATED TERMINAL (that means you open a terminal with the desired path)
 
 => `CLI` is known as Command Line Interface. Some programs require to interact with them via text commands (typing in some explicit text to run or make changes to the application).
 
@@ -72,7 +72,9 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
 |1| https://github.com/ | Create repository > Add description and tags > Copy HTTPS of your repo (#) |
-|2| Create Folder | Open with VSC to start working > Open your Terminal (look that it says "BASH") |
+|2| Create Folder | Open with VSC to start working > Open your Terminal by clicking "Terminal" > "New Terminal" (look that it says "BASH") |
+|2.1| $ pwd | OPTIONAL: Shows you the path of your current folder |
+|2.2| $ ls | OPTIONAL: Shows you all the files and folders in your current folder |
 |3| $ git init | Initialize git in the terminal (click the arrow beside the + to see if "BASH" is default) |
 |4| $ git config user.name "" | OPTIONAL: configurate the terminal with your name (useful if you work on different computers) |
 |5| $ git config user.email "" | OPTIONAL: configurate the terminal with your email (useful if you work on different computers) |
@@ -98,8 +100,8 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
-|1| FOLDER CHECK | Check if you are in the right output folder where git has been initialized |
-|2| $ cd ../ or: dollar ld | CHANGE directory or SHOW the CONTENT of your directoy to adjust your folder output if necessary |
+|1| FOLDER CHECK | Check if you are in the right output folder where git has been initialized. If not, you can either click in VSC on "Terminal" > "New Terminal" or use the cd prompts |
+|2| $ cd .. OR cd OR drag and drop | CHANGE Directory one step backwards (..) or forwards without the double points or DRAG AND DROP a folder from your explorer in your command line so it should automatically direct you to this folder |
 |3| $ git pull | CHECK of undone changes (conflicts) and decide which change you want to make if necessary. A pull request will synchronise your remote data (code review before we merge changes in) |
 |4| $ git add . | ADD what you changed (ready to track in GIT) The "." means "ADD ALL FILES", but you can also name an exact file from the explorer if you wish like "add index.html" |
 |5| $ git commit -m "" | COMMIT a message to say what you changed (Write a desctiption between "", like what and why btw you can add a second one for the description) - It saves your files in GIT |
@@ -107,7 +109,6 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 |7| $ git status | STATUS check to make sure everything went right |
 
 
-<img text-align="center" alt="Github" width="" src="https://w3cschoool.com/public/file/Git/git-pull2.png" /> 
 
 <br />
 
@@ -118,13 +119,18 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 | Repository| Project Folder, place "Ablage bzw Schublade / Aufbewahrungsort" where your project is kept with lots of files |
 | Remote| Remote Repository like GITHUB where your projects are hosted / placed on an external server (like Dropbox, but for Code) |
 |-|--|
-| PULL | "PULLING SOMETHING LIKE CHANGES IN FROM SOMEBODY", like: It COMPARES CHANGES: Download change from the REMOTE (Github) to your WORKSPACE (local machine) which is the opposite of push. It's also a CHECK of undone changes (conflicts) A pull request will synchronise your remote data (code review before we merge changes in)  |
-| PUSH | "SENDING SOMETHING TO SOMEBODY", like: Upload GIT commits from your REPOSITORY (Project) to a REMOTE (Github) which is the opposite of pull |
+| ADD | ADD a change to the index (stages changes) |
+| PULL | "PULLING SOMETHING LIKE CHANGES IN FROM SOMEBODY or THE ACT OF RECEIVING SOMETHING FROM GITHUB", like: It COMPARES CHANGES: Download change from the REMOTE (Github) to your WORKSPACE (local machine) which is the opposite of push. A pull request will synchronise your remote data (code review before we merge changes in)  |
+| PUSH | "SENDING SOMETHING TO SOMEBODY or THE ACT OF SENDING SOMETHING TO GITHUB", like: Upload GIT commits from your REPOSITORY (Project) to a REMOTE (Github) which is the opposite of pull |
 | CLONE | CLONE a repository (Project) from a REMOTE (hosted hub) to your WORKSPACE (local machine) |
 | MERGE | JOINS ("zusammenführen") two or more development histories together. It is used by the git pull command to incorporate changes from a different repository and can be used by hand to resolve conflicts. |
+| FORK | FORK a repository (Project) from a REMOTE (hosted hub from another guy) to your REMOTE (your hosted hub) |
 
-<br />
-<br />
+<img align="left" alt="JavaScript" width="100%" src="https://static.javatpoint.com/tutorial/git/images/git-pull2.png" />
+
+<br>
+<br>
+
 
 ***
 <img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
@@ -268,15 +274,17 @@ Usually you merge a feature branch (in this example its called "feature") into t
 
 <br />
 
-**COMPLETELY REMOVE THE CHANGES TO A CERTAIN STATE BY USING A HARD RESET**:
+**COMPLETELY REMOVE THE CHANGES TO A CERTAIN STATE BY USING A RESET**:
 
 
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
 |0| $ git log | LISTS all the recent commits whcih have been made so far  |
-|1| $ git reset --hard a9fdeb5 | This command resets our repository TO THE STATE it was at in the a9fdeb5 commit on the master branch and DELETES EVERYTHING which happened until this commit. The staged commits before will remain as untouched|
+|1| $ git reset a9fdeb5 | This command resets our repository TO THE STATE it was at in the a9fdeb5 commit on the master branch and DELETES EVERYTHING which happened until this commit. The staged commits before will remain as untouched|
 |2| REPLACE a9fdeb5 with the ID  | Github > Repository (of your project) > click "commits" > Copy the ID of the state you want > paste it at STEP 1 and hit ENTER - Now your repo is staged based on your selcted ID |
 |3| Add > commit > push  | Process as usual |
+
+<img align="left" alt="JavaScript" width="100%" src="https://miro.medium.com/v2/resize:fit:1400/1*gZX2Cs-To3k1h63hHhPPcw.png" /> 
 
 <br />
 <br />
@@ -312,7 +320,7 @@ Usually you merge a feature branch (in this example its called "feature") into t
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
 |0| First Step | Create a new folder > Open VSC > Open your Terminal|
-|1| $ git clone (#) | (#) Copy the "https:Link" of the desired Repository when you click on the "code"-button (The third button beside "Go to file" and "Add file") and paste it behind the command |
+|1| $ git clone (#) | (#) Copy the "https:Link" of the desired Repository when you click on the "code"-button (The third button beside "Go to file" and "Add file") and paste it behind the command. Dont put it into brackets (), just write it down right away |
 
 <br />
 <br />
