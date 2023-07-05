@@ -126,7 +126,7 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 | MERGE | JOINS ("zusammenführen") two or more development histories together. It is used by the git pull command to incorporate changes from a different repository and can be used by hand to resolve conflicts. |
 | FORK | FORK a repository (Project) from a REMOTE (hosted hub from another guy) to your REMOTE (your hosted hub) |
 
-<img align="left" alt="JavaScript" width="100%" src="https://static.javatpoint.com/tutorial/git/images/git-pull2.png" />
+<img align="left" alt="Pull, Push,Commit Diagram" width="100%" style="margin-bottom:70px;" src="https://static.javatpoint.com/tutorial/git/images/git-pull2.png" />
 
 <br>
 <br>
@@ -284,7 +284,7 @@ Usually you merge a feature branch (in this example its called "feature") into t
 |2| REPLACE a9fdeb5 with the ID  | Github > Repository (of your project) > click "commits" > Copy the ID of the state you want > paste it at STEP 1 and hit ENTER - Now your repo is staged based on your selcted ID |
 |3| Add > commit > push  | Process as usual |
 
-<img align="left" alt="JavaScript" width="100%" src="https://miro.medium.com/v2/resize:fit:1400/1*gZX2Cs-To3k1h63hHhPPcw.png" /> 
+<img align="left" alt="diagram" width="100%" style="margin-bottom:70px;"  src="https://miro.medium.com/v2/resize:fit:1400/1*gZX2Cs-To3k1h63hHhPPcw.png" /> 
 
 <br />
 <br />
