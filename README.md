@@ -171,7 +171,7 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 |3| $ git checkout -b feature | CREATES a new branch which is called "feature" and also CHECKOUTS to your new branch (you switch over from your master branch to your "feature" branch which is independant to your other branches)  |
 |4| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) Note: your changes will be only added (and also SEEN) to your feature branch |
 |5| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") Note: This will be ONLY commited and saved to your feature branch |
-|6| $ git push -u origin feature | PUSH your desired changes from your repository to the remote (Github) / Thats actually the part where you synchronize everything together to be up todate on remote as well as on your workspace. The branch will now appear on your github repository |
+|6| $ git push -u origin feature OR "git push --set-upstream origin feature" | PUSH your desired changes from your repository to the remote (Github) / Thats actually the part where you synchronize everything together to be up todate on remote as well as on your workspace. **The branch will now appear on your github repository** |
 |6.1| $ git diff master | SHOWS MASTER vs FEATURE changes: which files got a change, so basically what's new and what's old |
 |-|--|--|
 |-|--|Now it's time to compare and merge your changes|
