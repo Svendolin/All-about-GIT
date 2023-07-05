@@ -154,7 +154,7 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 <br>
 
 
-**💢 <2) other way with COMMAND LINES in VSC TERMINAL:**
+**💢 <2) Directly on your LOCAL WORKSPACE with COMMAND LINES in VSC TERMINAL:**
 * If you dont want to start from 0, clone a reposirotory from GITHUB to your local machine (workspace) with the command line: $ git clone and the # of the repository
 
 | STEP | COMMAND | EFFECT  | 
@@ -198,10 +198,6 @@ Usually you merge a feature branch (in this example its called "feature") into t
 <br />
 <br />
 
-***
-
-<img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
-
 ## &nbsp;SHOW Commit 👀
 ***
 
@@ -212,6 +208,26 @@ Usually you merge a feature branch (in this example its called "feature") into t
 |1| $ git log | OVERVIEW of the commits which have been made in this branch  |
 |2| COPY the commit ID (First 7 letters) | commit 6ea139a009... = Each commit has its own ID (also shown in the GITHUB repo > commits) => Make a copy with ctrl + c of the first 7 letters |
 |3| $ git show 6ea139a | SHOWS the changes which have been made in this commit |
+
+<br />
+<br />
+
+***
+
+<img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
+
+## &nbsp;How to FETCH Branches 🍀
+***
+
+**FOLLOWING CASE**:
+* You have a repository on your local machine (workspace) BUT the branches are not up to date, for example the remote (Github) is far more ahead => So you have to fetch the branches from the remote (github) to your local machine (workspace) to make sure you have everything up to date!
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|0|-| Start at your master branch in your local machine (workspace)|
+|1| $ git branch | SHOWS to CHECK how many branches are made in this project (green coloured branch name and *) |
+|2| $ git fetch origin | FETCHES the branches from the remote (github) to your local machine (workspace) to make sure you have everything up to date! |
+|3| - | Now you can see that the remote branches are fetched to your local machine (workspace) and actually checkout to these branches |
 
 <br />
 <br />
@@ -231,19 +247,11 @@ Usually you merge a feature branch (in this example its called "feature") into t
 
 <br />
 
-**UNDO MERGE**:
-
-| STEP | COMMAND | EFFECT  | 
-|:--------------| :--------------| :--------------|
-|0| $ git reset --merge HEAD~1 | UNDO this MERGE: Reverts to the last commit in your repository you've made (refers to the current state as it was right before)  |
-
-<br />
-
 **UNDO COMMIT**:
 
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
-|0| $ git reset HEAD~1 | UNDO the last commit and unstages the changes again  |
+|0| $ git revert HEAD~1 | UNDO this MERGE: Reverts to the last commit in your repository you've made (refers to the current state as it was right before)  |
 
 <br />
 
@@ -254,7 +262,7 @@ Usually you merge a feature branch (in this example its called "feature") into t
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
 |0| $ git log | LISTS all the recent commits whcih have been made so far  |
-|1| $ git reset a9fdeb5 | This command resets our repository TO THE STATE it was at in the a9fdeb5 commit on the master branch. NOTE: Use YOUR ID at step 2|
+|1| $ git revert a9fdeb5 | This command resets our repository TO THE STATE it was at in the a9fdeb5 commit on the master branch. NOTE: Use YOUR ID at step 2|
 |2| REPLACE a9fdeb5 with the ID  | Github > Repository (of your project) > click "commits" > Copy the ID of the state you want > paste it at STEP 1 and hit ENTER - Now your repo is staged based on your selcted ID |
 |3| Add > commit > push  | Process as usual |
 
@@ -305,6 +313,48 @@ Usually you merge a feature branch (in this example its called "feature") into t
 |:--------------| :--------------| :--------------|
 |0| First Step | Create a new folder > Open VSC > Open your Terminal|
 |1| $ git clone (#) | (#) Copy the "https:Link" of the desired Repository when you click on the "code"-button (The third button beside "Go to file" and "Add file") and paste it behind the command |
+
+<br />
+<br />
+
+***
+<img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" /> 
+
+## &nbsp;How to use .GITIGNORE ⚡
+***
+**What is that?**
+* This is a file which is used to exclude certain files from being pushed to the repository. This is useful for example if you want to exclude the node_modules folder from being pushed to the repository because it is too big and not necessary for the project to work on another machine.
+
+* You have some images or passwords in your project which you don't want to be pushed to the repository? Then you can exclude them by using the .gitignore file.
+
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|0| Write a file in VSC | Create a new file by naming it .gitignore |
+|1| Comments | You can use comments by using the # symbol |
+
+```
+# ignores that specific file
+filetoignore.html
+
+# ignores the file in the specified folder of src
+src/anotherfiletoignore.html
+
+# ignores all files in this folder
+images/*
+
+# BUT it excludes a specific file in that folder, so this one wont be exluded
+!images/keepme.jpg
+
+# Ignores all files with the specified extension like .zip
+*.zip
+
+```
+
+| STEP | COMMAND | EFFECT  | 
+|:--------------| :--------------| :--------------|
+|3| add, commit, push | After the changes be sure to make the usual process of ADDING > COMITTING > PUSHING |
+
 
 <br />
 <br />
