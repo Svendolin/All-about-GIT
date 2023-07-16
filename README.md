@@ -166,7 +166,7 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 | STEP | COMMAND | EFFECT  | 
 |:--------------| :--------------| :--------------|
 |1| $ git branch | SHOWS how many branches are made in this project (green coloured branch name and *) |
-|2| $ git pull | PULLS the changes from the remote (github) to your local machine (workspace) to make sure you pull all the possible changes towards your workspace to keep you up to date! |
+|2| $ git pull (do that from your MASTER branch) | PULLS the changes from the remote (github) to your local machine (workspace) to make sure you pull all the possible changes towards your workspace to keep you up to date! |
 |2.1| $ git status |  SHOWS the status of your project (if there are any changes) |
 |3| $ git checkout -b feature | CREATES a new branch which is called "feature" and also CHECKOUTS to your new branch (you switch over from your master branch to your "feature" branch which is independant to your other branches)  |
 |4| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) Note: your changes will be only added (and also SEEN) to your feature branch |
