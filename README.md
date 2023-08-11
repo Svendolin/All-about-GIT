@@ -168,6 +168,7 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 |1| $ git branch | SHOWS how many branches are made in this project (green coloured branch name and *) |
 |2| $ git pull (do that from your MASTER branch) | PULLS the changes from the remote (github) to your local machine (workspace) to make sure you pull all the possible changes towards your workspace to keep you up to date! |
 |2.1| $ git status |  SHOWS the status of your project (if there are any changes) |
+|2.2| $ git rebase (from your master branch) | OPT: REBASES your project (if there are any changes) * |
 |3| $ git checkout -b feature | CREATES a new branch which is called "feature" and also CHECKOUTS to your new branch (you switch over from your master branch to your "feature" branch which is independant to your other branches)  |
 |4| $ git add . | ADD what you changed (. means ALL, but you can also name an exact file from the explorer) Note: your changes will be only added (and also SEEN) to your feature branch |
 |5| $ git commit -m "" | COMMIT to say what you changed (Write a desctiption between "") Note: This will be ONLY commited and saved to your feature branch |
@@ -183,6 +184,14 @@ GITHUB COPILOT (for Windows) - INSTALLATION:
 |8| $ git push origin :feature | OPTIONALLY but NEEDED if you also executed 7.1: Delete the feature branch on the remote (github) |
 
 <br>
+
+**NOTE FOR "$ git REBASE":**
+
+*Git Merge: Der Hauptunterschied zwischen git rebase und git merge besteht darin, dass git rebase einen neuen Satz von Commits erzeugt, die auf den Zielzweig angewendet werden, während git merge einen neuen Merge-Commit erzeugt, der die Änderungen aus beiden Zweigen kombiniert. Ermöglicht Benutzern das Zusammenführen von Zweigen in Git. Dies wird vom Master-Branch her getätigt.*
+
+<br>
+
+<img align="left" alt="merge vs rebase" width="100%" style="margin-bottom:70px;"  src="https://miro.medium.com/v2/resize:fit:868/1*g48HJkKNsZwNlWEM6Z82ig.jpeg" /> 
 
 **NOTE FOR "STAGING":**
 
